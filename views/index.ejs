@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Contacts List</title>
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <h1>Contacts</h1>
+    <hr>  
+    <div id="add-contacts">
+    <h2> Add Contacts</h2>
+      <form action="/contacts/addNew" method="POST">
+        <label>Name</label> </br>
+        <input type="text" name="fullName"></br>
+        <label>Phone</label></br>
+        <input type="text" name="phoneNumber"></br>
+        <label>Address</label></br>
+        <input type="text" name="address">
+        <input value="Save" type="submit"/>
+      </form>
+    </div>
+    <hr>
+    <div id="show-contacts">
+      
+      <ul>
+        <% for(var i = 0; i < contacts.length; i++) { %>
+          <li><%= contacts[i].name %></li>
+        
+          <li><%= contacts[i].phone %></li>
+       
+          <li><%= contacts[i].address %></li>
+          <li>-----------------------------</li>
+        <% } %>
+      </ul>
+
+      <!--       <ul>
+        <% for(var i = 0; i < contacts.length; i++) { %>
+          <li><%= contacts[i].name %></li>
+        <% } %>
+
+        <% for(var i = 0; i < contacts.length; i++) { %>
+          <li><%= contacts[i].phone %></li>
+        <% } %>
+
+        <% for(var i = 0; i < contacts.length; i++) { %>
+          <li><%= contacts[i].address %></li>
+        <% } %>
+      </ul> -->
+      
+    </div>
+  </body>
+
+</html>
+  

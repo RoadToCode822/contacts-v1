@@ -24,11 +24,9 @@
       
       <ul>
         <% for(var i = 0; i < contacts.length; i++) { %>
-          <li><%= contacts[i].name %></li>
-        
-          <li><%= contacts[i].phone %></li>
-       
-          <li><%= contacts[i].address %></li>
+          <li><strong>Name: </strong><%= contacts[i].name %></li>
+          <li><strong>Phone: </strong><%= contacts[i].phone %></li>
+          <li><strong>Address: </strong><%= contacts[i].address %></li>
           <li>-----------------------------</li>
         <% } %>
       </ul>

@@ -11,7 +11,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/contacts/addNew', function(req, res, next){
-  var name = req.body.name;
+  console.log(req.body);
+  var name = req.body.fullName;
   var phone = req.body.phoneNumber;
   var address = req.body.address;
 

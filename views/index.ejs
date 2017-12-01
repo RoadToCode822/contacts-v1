@@ -24,8 +24,8 @@
       
       <ul>
         <% for(var i = 0; i < contacts.length; i++) { %>
-          <li><strong>Name: </strong><%= contacts[i].name %></li>
-          <li><strong>Phone: </strong><%= contacts[i].phone %></li>
+          <li><strong>Name: </strong><%= contacts[i].fullName %> <a href='/contacts/delete/<%= contacts[i]._id %>'>Delete</a></li>
+          <li><strong>Phone: </strong><%= contacts[i].phoneNumber %></li>
           <li><strong>Address: </strong><%= contacts[i].address %></li>
           <li>-----------------------------</li>
         <% } %>
